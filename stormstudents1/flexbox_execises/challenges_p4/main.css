@@ -1,0 +1,57 @@
+body {
+  background-color: white; }
+@media only screen and (max-width: 600px) {
+         article {
+      background-color: royalblue;
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+  }
+  header, footer, aside {
+    width: 100%;
+  }
+    }
+      
+  
+
+  @media only screen and (min-width: 601px) and (max-width: 800px)  {
+      
+      .aside__1, .aside__2 { width:50%; }
+      article {
+        background-color: royalblue;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+    }
+    header, footer {
+      width: 100%;
+    } 
+     
+    }
+    
+    
+
+  @media only screen and (min-width: 801px)   {
+    body {
+        background-color: red;
+      }
+      header, footer {
+        width: 100%;
+      }
+      .content {
+        display: flex;
+      }
+       .aside__1 {
+         order: 1;
+         width: 20%;
+       }
+       article {
+        order: 2;
+        width: 60%;
+      }
+      .aside__2 {
+        order: 3;
+        width: 20%;
+      }
+      }
+    

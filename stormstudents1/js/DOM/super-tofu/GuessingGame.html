@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guessing Game</title>
+</head>
+<body>
+    
+    <script>
+     
+    var x = prompt("What's your number?");
+        
+    var y = Math.floor(Math.random() * 10 + 1); //Production random number
+    var guess = 1;   
+     
+function game(){
+if(x == y ) {alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "+ guess + " GUESS ");  } 
+    else  {guess++; alert("OOPS SORRY!! unsuccessful  guess");x = prompt("What's your number?");game()}
+    }
+    game();
+   
+    </script>
+</body>
+</html>

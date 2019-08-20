@@ -1,0 +1,56 @@
+@mixin all-reset {
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+
+
+@mixin my-nav {
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction:column; 
+        align-items: center;
+           }
+        
+      li a {
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none; }
+}
+
+@mixin my-img($my-color){
+    height:45vh;
+    border:3px solid $my-color;
+}
+
+* {
+    @include all-reset;
+}
+
+nav,footer{
+    @include my-nav;
+}
+
+img[alt="Image of mountains"]{
+    @include my-img(green);
+}
+
+img[alt="Image of surfer"]{
+    @include my-img(red);
+}
+
+img[alt="Image of tree"]{
+    @include my-img(blue);
+}
+
+@mixin my-font($my-color){
+    font-family: 'Stack';font-size: 16px;
+    color:$my-color;
+}
+ .text1{ @include my-font(green);}
+ .text2{ @include my-font(red);}
+ .text3{ @include my-font(blue);}
+
+

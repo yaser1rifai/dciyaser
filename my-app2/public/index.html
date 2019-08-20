@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <title>React App freact Arabic</title>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+  <body>
+
+    <div id="root"> </div>
+   
+    <script type="text/babel">
+   
+
+   class App extends React.Component{
+     state={
+       parent:"App Parent state "
+     }
+     render(){
+      return(
+        <div>
+         <h1>Hallo from App</h1>
+         <Child name={this.state.parent}/>
+        {this.state.parent}
+       </div>
+     )
+   }
+   }
+
+
+/* ------------------------------------ */
+   class Child extends React.Component{
+     
+     render(){
+      return(
+        <div>
+         Hallo from Child ---- {this.props.name}
+       </div>
+     )
+   }
+   }
+   
+   /* ------------------------------------ */
+    ReactDOM.render(<App />,document.getElementById('root'));
+
+    </script>
+  </body>
+</html>

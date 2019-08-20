@@ -1,0 +1,147 @@
+$cen:center;
+$fl:flex;
+$no:none;
+$size1:1rem;
+@mixin my-style1 {
+    display: $fl;
+    justify-content: $cen;
+}
+
+@mixin my-style{
+   @include my-style1;
+   flex-flow: column nowrap;
+    align-items: $cen;
+}
+
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 6rem;
+    text-align: $cen;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 1.5rem;
+
+    h1, h2 {
+        font-size: $size1;
+    }
+}
+
+
+
+.nav_links {
+    margin-top: $size1;
+    @include my-style1;
+    margin-bottom: $size1;
+    background-color: rgba(0, 0, 255, 0.514);
+    li {
+        padding:$size1;
+        list-style: $no;
+    }
+    
+    a {
+        text-decoration: $no;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+}
+
+
+
+
+
+.main {
+    @include my-style;
+
+    .section_text  {
+        &>h3{
+         text-align: $cen;
+     }
+     margin: $size1;
+     }
+
+    
+
+}
+
+.section_images {
+   @include my-style;
+    margin: $size1;
+    
+}
+ 
+ 
+
+img {
+    height: 12rem;
+    width: 18rem;
+    margin: 0 0.5rem $size1 0.5rem
+}
+
+.aside {
+    @include my-style1;
+    flex-flow: column nowrap;
+   
+    margin: $size1;
+
+    .first_aside, .second_aside, .third_aside, .fourth_aside {
+        border: 0.2rem solid rgba(0, 0, 255, 0.678);    
+        padding: $size1;
+        margin-bottom: $size1;
+    }
+
+}
+
+
+
+
+
+.footer {
+    height: 5rem;
+    margin-top: $size1;
+    background-color: rgba(0, 0, 255, 0.678);
+
+    .footer_links {
+        @include my-style1;
+        margin-bottom: $size1;
+        li {
+            padding:$size1;
+            list-style: $no;
+        }
+        
+        a {
+            text-decoration: $no;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+    .section_images {
+        display: $fl;
+        flex-flow: row wrap;
+    }
+
+    .section_text {
+        width: 70%;
+    }
+
+    .aside {
+        display: $fl;
+        flex-flow: row wrap;
+    }
+
+    .first_aside, .second_aside, .third_aside, .fourth_aside {
+        width: 45%;
+        margin: 0.5rem;
+    } 
+}

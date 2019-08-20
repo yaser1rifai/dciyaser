@@ -1,0 +1,23 @@
+/* Use flexbox to display the divs in a row. 
+
+When resizing the page, the divs on the last row should take up all available space .
+
+ Dispaly the divs on multile Rows  When resizing the page,row should take up all 
+ available space.(use flex grow)  */
+body{
+    display: flex;
+    flex-direction: row  ;
+    flex-wrap: wrap;
+}
+div#myDiv {
+    flex-grow:1;
+  }
+
+div {
+    height: 100px;
+    width: 150px; 
+    background-color: darkgray;
+    margin: 1em;
+    border: 2px solid red;
+    text-align: center;
+}

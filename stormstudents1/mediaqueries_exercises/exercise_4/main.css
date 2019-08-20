@@ -1,0 +1,44 @@
+* {box-sizing: border-box;}
+img {
+    max-width: 100%;
+}
+
+.clearfix {
+    border: 10px solid black;
+    
+}
+/* 
+<li>Add margin around the edges of this page</li>
+                <li>Make the font-size larger</li>
+                <li>Change the font-family</li>
+                <li>Add spacing between the list items</li> */
+
+@media only screen  and (max-width: 767px) {
+    body {
+        margin: 50px 50px 50px 50px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+    li {padding: 50px;}
+  }
+
+  @media only screen  and (min-width: 768px)and and (max-width: 1199px) {
+    img {
+        float:left;
+        width: 50%;
+    }
+    body{background-color:grey;
+         margin:50px 50px 50px 50px;}
+    .clearfix {
+                       overflow: auto;}
+    }
+
+     @media only screen   and (min-width: 1200px) {
+        
+        body{background-color:yellow;
+             font-size: 60px;}
+    .clearfix {
+                display:flex;}
+        
+         }

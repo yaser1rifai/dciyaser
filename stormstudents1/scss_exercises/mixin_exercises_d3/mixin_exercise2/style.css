@@ -1,0 +1,25 @@
+.ball1, .ball2, .ball3 {
+  width: 200px;
+  height: 200px;
+  border: 2px solid red;
+  border-radius: 100px;
+  margin: 10px;
+  background: red;
+  position: relative;
+  animation: mymove 5s infinite;
+  animation-timing-function: linear; }
+
+@keyframes mymove {
+  from {
+    left: 0px; }
+  to {
+    left: 1000px; } }
+
+.ball1 {
+  border: 8px solid green; }
+
+.ball2 {
+  border: 8px solid yellow; }
+
+.ball3 {
+  border: 8px solid blue; }

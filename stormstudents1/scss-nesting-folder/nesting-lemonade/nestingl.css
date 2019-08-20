@@ -1,0 +1,36 @@
+body h1 {
+  text-align: center; }
+
+.banner {
+  background-image: url("./lemonade2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  opacity: 0.8; }
+  .banner .slogan {
+    padding: 225px 30px 30px 400px; }
+    .banner .slogan span {
+      border: 3px solid black;
+      opacity: 1;
+      padding: 50px;
+      font-family: 'Pacifico';
+      font-size: 30px; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: 'Pacifico';
+  font-size: 30px; }
+  .container .icon {
+    width: 30%;
+    height: 65vh;
+    border: 6px solid #000;
+    padding: 0 0 50px 0;
+    margin: 30px; }
+    .container .icon img {
+      border: 0.1rem solid rgba(128, 128, 128, 0.808);
+      margin: 1rem;
+      height: 20rem; }

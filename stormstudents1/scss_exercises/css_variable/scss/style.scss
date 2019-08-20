@@ -1,0 +1,25 @@
+$red:#ff6f69;
+$yellow:#ffeead;
+$beige:#ffcc5c;
+
+html, body {
+    background: $beige;
+    color: $red;
+}
+
+h1, p {
+    color: $red;
+}
+
+#navbar a {
+    color: $red;
+}
+
+.item {
+    background: $yellow;
+}
+
+button {
+    background:$red ;
+    color:$yellow;
+}

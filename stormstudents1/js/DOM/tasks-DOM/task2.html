@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8"/>
+      <title>About Me</title>
+      <style>
+          .listitem {
+            color: red;
+          }
+        </style>
+    </head>
+    <body>
+      <h1>About Me</h1>
+
+      <ul>
+        <li>Nickname: <span id="nickname"></span>
+        <li>Favorites:  <span id="favorites"></span>
+        <li>Hometown: <span id="hometown"></span>
+      </ul>
+
+      <script>
+    document.body.style.fontFamily = 'Arial, sans-serif';
+   document.getElementById('nickname').innerHTML = 'Yaser Rifai';
+   document.getElementById('favorites').innerHTML = '40';
+   document.getElementById('hometown').innerHTML = 'Germany,Berlin';
+   var items = document.getElementsByTagName('li');
+   for (var i = 0; i < items.length; i++) {
+      items[i].className = 'listitem';
+   }
+    
+    var myPic = document.createElement('img');
+    myPic.src =' https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwi30Ku00JTjAhWSZ1AKHZbJA8YQjRx6BAgBEAU&url=https%3A%2F%2Fwww.businessinsider.com%2Fap-german-university-starts-training-plan-for-refugee-teachers-2016-4&psig=AOvVaw31EDpV3YH9uRQBNsA824zk&ust=1562101676760618';
+    document.body.appendChild(myPic);
+      </script>
+    </body>
+  </html>
+
+  <!-- 
+
+* In JavaScript, change the body tag's style so it has a font-family of "Arial, sans-serif".
+* In JavaScript, replace each of the spans (nickname, favorites, hometown) with your own information.
+* Iterate through each li and change the class to "list-item".
+* Add a style tag that sets a rule for .list-item to make the color red.
+* Create a new img element and set its src attribute to a picture of you. Append that element to the page.
+
+   -->

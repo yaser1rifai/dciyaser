@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Select  DOM</title>
+</head>
+<body>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>DOM Manipulation</title>
+        </head>
+        <body>
+            <div class="header">    </div>
+            <section id="container">
+                <ul>
+                    <li class="first">one</li>
+                    <li class="second">two</li>
+                    <li class="third">three</li>
+                </ul>
+                <ol>
+                    <li class="first">one</li>
+                    <li class="second">two</li>
+                    <li class="third">three</li>
+                </ol>
+            </section>
+            <div class="footer">  </div>
+        </body>
+         <p id="demo1">  --------</p>
+        <p id="demo2">  --------</p>
+        
+       <p>--------------------- END HTML-------------------------------------</p>
+
+       <script>
+        //1
+   var x1=document.getElementById("container");
+  document.getElementById("demo1").innerHTML="Hello   1- section with an id of container without using querySelector";
+//2
+var x2=document.querySelector("section");
+   document.getElementById("demo2").innerHTML="2- section with an id of container using querySelector";
+  //3 
+  var x3 = document.querySelectorAll(".second");// all of the list items with a class of "second".
+  for(var i=0;i<x3.length;i++){
+    x3[i].style.color = "red"; 
+}//4
+var x4=document.querySelectorAll("ol >li.third");;
+for( i=0;i<x4.length;i++){
+    x4[i].style.color = "yellow"; 
+}  //5
+ //x1.innerHTML="Hello";
+  
+  //6. Add the class main to the div with a class of footer.
+  var element = document.getElementsByClassName("footer");
+   element[0].classList.add("main");
+   console.log(element);
+   //7
+   element[0].classList.remove("main");
+   //8  9  10
+   var myLi=document.createElement('li');
+   myTextLi=document.createTextNode("four");
+   myLi.appendChild(myTextLi);
+
+   var myUl=document.createElement('ul');
+       myUl.appendChild(myLi);
+        //11
+  var x11= document.getElementsByTagName("ol");
+  x11[0].style.background='green';
+   //12
+   element[0].classList.remove("footer"); 
+       </script>
+       </body>
+      
+       </html>
+
+       

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guessing Game</title>
+
+    <style> 
+   
+     .w1 {
+  margin:0px 30px 0px 30px;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 110px;
+  background-color: rgb(235, 240, 300);
+}
+.w2{
+    margin:0px 30px 60px 30px;
+    background-color: white;
+    padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+body {
+  background-color: black;
+}
+
+.guessField {
+    width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+::placeholder { 
+    font-size: 20px;
+}
+.guessSubmit{
+    background-color: rgb(214, 44, 230);
+  border-radius: 10%;
+ height: 45px;
+ width:100px;
+  color: white;
+ 
+  text-align: center;
+  
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+    </style> 
+</head>
+<body>
+<div class="w1">
+    <p  id="line1" style="font-size: 130px ; margin:0px 0 0 0"> Guess Me!</p> 
+  
+  <p id="line2" style="font-size: 27px ; margin-bottom:10px"> I'm thinking of a number between 1 and 10 , can you guess it?</p> 
+  
+  <div class="form"> 
+    <input type = "text" id = "guessField" class = "guessField"placeholder="Your guess goes here..."> 
+    <input onclick="game()" type = "submit" value = "Guess" class = "guessSubmit" id = "submitguess"> 
+    <input onclick="tryAgain()" type = "submit" value = "TryAgain" class = "guessSubmit" >
+   </div> 
+</div>
+  <div class="w2"></div>
+<script type = "text/javascript"> 
+    var y = Math.floor(Math.random() * 10 + 1); // random value generated 
+     var line1=document.getElementById("line1"); 
+     var line2=document.getElementById("line2");
+   
+    var guess = 1;  // counting the number of guesses 
+      
+    function  game(){ 
+      
+   var x = document.getElementById("guessField").value; //  // number guessed by user  
+  
+   if(x == y && guess<3) 
+   {    
+    line1.textContent=   "Success!!!"  
+    line2.textContent = "The number is indeed "+ y +"You got the number correctly after "+ guess +" attempts";
+      // alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "     + guess + " GUESS "); 
+   } 
+   else if(x != y && guess<3) {
+  
+    line1.textContent=   "Wrong!!!"  
+    line2.textContent = `Try Again! You have ${3-guess}   attempts left `;
+    guess++;
+   } 
+   
+   else 
+   {     
+     
+    line1.textContent=   "Sorry, human"  
+    line2.textContent = "you couldn't guess the number in less than three times. The number was "+ y;
+    guess++;
+  
+       //alert("OOPS SORRY!! TRY A  NUMBER"); 
+   } 
+   
+} 
+function  tryAgain(){
+    location.reload();
+    
+}
+</script> 
+</body>
+</html>

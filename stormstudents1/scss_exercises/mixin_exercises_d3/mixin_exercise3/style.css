@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+nav ul, footer ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+nav li a, footer li a {
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; }
+
+img[alt="Image of mountains"] {
+  height: 45vh;
+  border: 3px solid green; }
+
+img[alt="Image of surfer"] {
+  height: 45vh;
+  border: 3px solid red; }
+
+img[alt="Image of tree"] {
+  height: 45vh;
+  border: 3px solid blue; }
+
+.text1 {
+  font-family: 'Stack';
+  font-size: 16px;
+  color: green; }
+
+.text2 {
+  font-family: 'Stack';
+  font-size: 16px;
+  color: red; }
+
+.text3 {
+  font-family: 'Stack';
+  font-size: 16px;
+  color: blue; }

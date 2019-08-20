@@ -1,0 +1,32 @@
+$mycenter:center;
+$mywidth:100%;
+$myheight:auto;
+$mydi_n:none;
+$mydi:flex;
+$mypa:14px 16px;
+$mymax:600px;
+$card_m_p20:20px;
+$float_l:left;
+
+@media only screen and (max-width: $mymax) 
+{
+      body { text-align: $mycenter; }
+      img { width: $mywidth; height: $myheight;}
+       ul {list-style-type: $mydi_n;display: $mydi;justify-content: $mycenter;}
+  li a {text-align: $mycenter; padding: 14px 16px;text-decoration: $mydi_n;}
+}
+
+  @media (min-width: $mymax)
+   {
+    ul {list-style-type: $mydi_n;display: $mydi; justify-content: $mycenter;}
+      
+    li a {text-align: $mycenter; padding: 14px 16px;text-decoration: $mydi_n;}
+
+    .cards{display: $mydi; margin: $card_m_p20; padding:$card_m_p20;justify-content: $mycenter; }
+      
+    .card{margin: $card_m_p20; padding:$card_m_p20; }
+ 
+    img { width: 25%;height: $myheight;float:$float_l;} 
+    aside,section{float:$float_l;}
+  
+   }
